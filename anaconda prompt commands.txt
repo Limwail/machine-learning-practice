@@ -1,0 +1,32 @@
+# Початок роботи з Anaconda
+conda init
+conda config --add channels conda-forge
+conda config --set channel_priority disabled
+
+# Ініціалізація середовища + встановлення бібліотек
+conda create env_mlf python=3.11 spyder spyder-notebook pandas seaborn ipywidgets ipynb-py-convert scikit-learn ydata-profiling
+
+# Активація середовища
+conda activate env_mlf
+spyder
+
+# Деактивація середовища
+conda deactivate
+
+# Встановлення, переглад та видалення бібліотек
+conda install scikit-learn
+conda env list
+conda env remove -n scikit-learn
+
+# Перетворення .py файлів на ноутбуки
+ipynb-py-convert "D:\GoIT_ML_Blended\lesson-1\blended_1.py" "D:\GoIT_ML_Blended\lesson-1\blended_1_CONVERTED.ipynb"
+
+# AttributeError: 'super' object has no attribute '__sklearn_tags__'
+conda remove -y scikit-learn
+conda install scikit-learn==1.5.2
+conda install category-encoders=2.6.4
+
+
+
+
+
